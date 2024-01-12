@@ -119,6 +119,7 @@ git remote remove origin
  
 Ejercicio 1
 git branch bibliografia
+git branch
  
 Ejercicio 2
 cd capitulos
