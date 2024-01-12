@@ -73,8 +73,8 @@ $ git show
 $ git commit -- amend -m "Añadido capítulo
 3 sobre gestión de ramas al índice.”
 $ git show 
-
-EJERCICIOS DE MANEJO DEL
+/************************************************************************************************/
+EJERCICIOS DE MANEJO DEL 
 HISTORIAL DE CAMBIOS 2
 $ git clone https://github.com/Liliana2817/libro-git.git
 $ cd libro-git
@@ -99,10 +99,58 @@ versiones del mismo proyecto y trabajar de manera simultanea
 en ellas" > capitulo3.txt
 git add .
 git commit -m "Añadido capítulo 3."
-el último paso no lo sé
+(4. Mostrar las diferencias entre la primera y la última versión del
+repositorio.)
+el paso 4 no se como saber la diferencia.. 
 
 Ejercicio 4
 echo "Capítulo 5: Conceptos avanzados" >> indice.txt
 git add .
 git commit -m "Añadido capítulo 5 al índice."
 git annotate indice.txt
+
+/***************************************************************************************/
+3. EJERCICIOS GESTIÓN RAMAS
+
+cd git 
+cd libro-git
+git reset --hard 48ed8
+git remote remove origin
+ 
+Ejercicio 1
+git branch bibliografia
+ 
+Ejercicio 2
+cd capitulos
+echo -e "patata" > capitulo4.txt
+git add .
+git commit -m "Añadido capítulo 4."
+git log --graph --all --oneline
+ 
+Ejercicio 3
+git branch checkout bibliografia
+echo -e "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+git add .
+git commit -m "Añadida primera referencia bibliográfica" 
+git log --graph --all --oneline
+ 
+Ejercicio 4
+git checkout main
+git merge bibliografia
+git log --graph --all --oneline
+git branch -d bibliografia
+git log --graph --all --oneline
+ 
+Ejercicio 5
+git branch bibliografia
+git checkout bibliografia
+echo -e "Scott Chacon and Ben Straub. Pro Git. Apress. Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)" > bibliografia.txt
+git add .
+git commit -a -m "Añadida nueva referencia bibliográfica."
+git checkout main
+echo -e "Chacon, S. and Straub, B. Pro Git. Apress. Loeliger, J. and McCullough, M. Version control with Git. O’Reilly." > bibliografia.txt
+git commit -a -m "Añadida nueva referencia bibliográfica."
+git merge bibliografia
+echo -e "Chacon, S. and Straub, B. Pro Git. Apress. Loeliger, J. and McCullough, M. Version control with Git. O’Reilly. Hodson, R. Ry’s Git Tutorial. Smashwords (2014)" > bibliografia.txt
+git commit -a -m "Resuelto conflicto de bibliografía"
+git log --graph --all --oneline
