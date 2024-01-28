@@ -1,0 +1,97 @@
+Módulo 1:
+
+ls
+ls
+mkdir primates
+ls
+mv chimps primates
+cd primates
+pwd
+ls
+cd ..
+pwd
+mkdir reptiles
+
+Quiz módulo 1:
+cd
+mv
+mv
+ls
+pwd
+mkdir
+more
+
+Módulo 2:
+
+mkdir snakes
+cp reptiles/cobras snakes
+rm reptiles/cobras
+rmdir reptiles
+mkdir pachyderms
+chmod g+w chimps
+ls -l
+chmod g+w *
+groups
+
+Quiz módulo 2:
+
+cp
+rm
+groups
+rmdir
+chmod
+*
+o
+x
+
+Módulo 3:
+
+man -k user
+man finger
+finger greg
+cd ~jester
+find . -name "joke*"
+cd kids
+cat joke-1 joke-2
+cat joke-1 joke-2 > ~/corny
+cd
+lpr -P zephyr corny
+lpq -P zephyr
+lprm -P zephyr 737
+lpr -P typhoon corny
+
+Quiz módulo 3:
+
+cat
+man
+lpq
+find
+lprm
+finger
+~
+>
+.
+
+Módulo 4:
+
+cp -r ~bookie/pools ~
+df
+df .
+rm -r pools
+ps aux
+ps aux | grep rogue
+kill 796
+ps aux | grep rogue
+kill -9 796
+ps aux | grep rogue
+
+Quiz módulo 4:
+
+df
+ps
+aux
+kill
+-9
+grep
+|
+-r
